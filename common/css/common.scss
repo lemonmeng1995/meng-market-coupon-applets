@@ -1,0 +1,197 @@
+image{
+	width: auto;
+	height: auto;
+}
+
+
+// 公共的按钮样式
+@mixin uibtn {
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 30rpx;
+    color: #fff;
+    border-radius: 8rpx;
+    width: 100%;
+}
+.ui-btn{
+  @include uibtn;
+}
+.round::after{
+	border:0
+	
+}
+.round{
+	border-radius: 100rpx;
+}
+
+
+.dialog_title {
+  padding: 30rpx 0 30rpx 0;
+  text-align: center;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+}
+//用户协议弹窗
+.ui-dialog_wrap{
+  border-radius: 24rpx 24rpx 0 0;
+  background: #FFFBF4;
+  box-sizing: border-box;
+  padding: 20rpx 54rpx 60rpx 54rpx;
+  z-index: 5;
+  .dialog_info{
+	font-size: 28rpx;
+	padding: 6rpx 0;
+	line-height: 40rpx;
+	}
+  .ui-btn{
+    margin-top: 60rpx;
+  }
+}
+.v2-red-color{
+  color:  #ff2a31;
+}
+// 公共弹窗
+.dialog_wrap {
+    position: fixed;
+    top: 46%;
+    left: 50%;
+    width: 550rpx;
+    background: #fff;
+    padding: 40rpx;
+    box-sizing: border-box;
+    font-size: 32rpx;
+    border-radius: 12rpx;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
+    z-index: 5;
+    .dialog_info.color-333{
+      color:#333;
+    }
+    .dialog_info {
+      font-size: 26rpx;
+      text-align: left;
+      line-height: 1.5;
+      font-weight: 500;
+      color: #666;
+      margin:0;
+      width: 100%;
+    }
+   .v2-red-color{
+     font-size: 28rpx;
+     text-align: left;
+     margin-bottom: 20rpx;
+   }
+    .onclose {
+        position: absolute;
+        top: -78rpx;
+        right: -4rpx
+    }
+    .onclose image {
+      display: inline-block;
+      width: 60rpx;
+      height: 60rpx;
+      cursor: pointer;
+    }
+    button {
+      @include uibtn; 
+      font-weight: 500;
+    }
+    .btns{
+      margin-top: 60rpx;
+      button{
+        border-radius: 60rpx;
+        color: #fff;
+      }
+    }
+  }
+
+
+
+.details_view{
+	min-height: 100vh;
+	background: #F4F4F4;
+    .img-box{
+      position: relative;
+      .main_img{
+        width: 100%;
+      }
+      .right_box{
+        position: fixed;
+        right: 0;
+        top: 20rpx;
+        z-index: 15;
+        image{
+          display: block;
+          width: 56rpx;
+          &+image{
+            margin-top: 20rpx;
+          }
+        }
+      }
+    }
+	.card_box{
+	  margin-top: -104rpx;
+	  position: relative;
+	  z-index: 10;
+	  .c_item{
+	    position: relative;
+		text-align: center;
+	    .right_data{
+	      position: absolute;
+	      right: 35rpx;
+	      bottom: 42rpx;
+	      display: flex;
+	      flex-direction: column;
+	      p{
+	        color: #666666;
+	        font-size: 28rpx;
+	        text-align: center;
+	        margin-bottom: 20rpx;
+	      }
+	    }
+		image{
+			width: 730rpx;
+			height: 250rpx;
+		}
+		button.round{
+			min-width:180rpx;
+			color:#fff;
+			padding:0 20rpx;
+		}
+	  }
+	  .ui-button{
+		  width: 180rpx;
+		  color: #fff;
+		  height: 56rpx;
+		  padding: 0 16rpx;
+		  box-sizing: border-box;
+	  }
+	}
+	.text-box{
+	  background: #fff;
+	  padding: 40rpx;
+	  margin: 20rpx;
+	}
+	.uni-countdown{
+		display: flex;
+		justify-content: center!important;
+		align-items: center;
+		.uni-countdown__number{
+			width: auto;
+			margin: 0rpx;
+		}
+		.uni-countdown__splitor{
+			padding-top: 0rpx;
+		}
+	}
+ }
+ 

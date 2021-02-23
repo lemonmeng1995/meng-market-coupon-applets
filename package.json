@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "crypto-js": "^4.0.0",
+    "js-md5": "^0.7.3"
+  }
+}
